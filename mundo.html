@@ -1,20 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daitoshi: La Wiki - El Mundo</title>
+    <title>Daitoshi: La Wiki - El Mundo y su Historia</title>
     <link rel="shortcut icon" href="img/logo.png" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Rye&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/inicio.css">
     <script src="js/componentes.js" defer></script>
+    <style>
+        .history-content-block { margin-bottom: 80px; }
+        
+        /* Ajuste de contenedores de imagen */
+        .image-full { 
+            width: 100%; 
+            /* Eliminamos el borde dashed y el fondo gris de placeholder */
+            background: transparent; 
+            border: none; 
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15); /* Añade profundidad */
+        }
+
+        .image-full img {
+            width: 100%;
+            height: auto;
+            max-height: 500px; /* Evita que las imágenes sean infinitamente altas */
+            object-fit: cover; /* Mantiene la proporción estética */
+            display: block;
+        }
+
+        .quote-block {
+            border-left: 8px solid var(--color-copper);
+            padding: 30px;
+            background: rgba(191, 126, 72, 0.05);
+            margin: 40px 0;
+            font-style: italic;
+        }
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+            align-items: center; /* Centra el texto con la imagen al lado */
+        }
+        @media (max-width: 768px) { .concept-grid { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
     <daitoshi-header></daitoshi-header>
 
-    // Contenido específico de el mundo aquí
+    <section class="hero" style="height: 60vh;">
+        <div class="hero-content">
+            <h1>El mundo de Daitoshi</h1>
+            <p>El auge de la tecnología y el ocaso del mundo verde.</p>
+        </div>
+    </section>
 
+    <main class="container section-padding">
+        
+        <div class="history-content-block">
+            <div class="section-header">
+                <h2>El Legado Kemushi</h2>
+                <p>La transición entre la naturaleza y el desierto de Sand.</p>
+            </div>
+            <p>Daitoshi se sitúa cronológicamente antes de los eventos de <em>Sand</em>. En este periodo, la humanidad gozaba de una libertad técnica absoluta, liderada por magnates que buscaban construir la metrópolis definitiva. Sin embargo, este progreso tenía una condición ineludible: para alimentar la gran ciudad steampunk, los jugadores deben explotar la tierra, destruyendo el entorno verde hasta convertirlo en el páramo retratado en el futuro de la saga.</p>
+            
+            <div class="image-full"><img src="./img/daitoshi.jpg" alt="Daitoshi Legacy"></div>
+        </div>
+
+        <div class="history-content-block">
+            <h2 style="font-family: var(--font-display);">La Ciudad Circular</h2>
+            <div class="concept-grid">
+                <div>
+                    <p>La metrópolis fue concebida originalmente como un inmenso **rondel**, un círculo donde cada sector permite realizar acciones específicas. A diferencia de otras ciudades, Daitoshi se expande físicamente: los jugadores electrifican distritos para aumentar los puntos de colocación de trabajadores, haciendo que las acciones iniciales, débiles en un principio, se vuelvan potentes motores industriales.</p>
+                    <p>La estructura de juego se basa en tres pasos fundamentales que reflejan la vida en la ciudad:</p>
+                    <ul>
+                        <li><strong>Visita al Distrito:</strong> Uso de trabajadores especializados por color.</li>
+                        <li><strong>Explotación:</strong> La recolección obligatoria de recursos que actúa como temporizador del fin del mundo.</li>
+                        <li><strong>Acción Industrial:</strong> El uso de recursos para potenciar inventos y fábricas.</li>
+                    </ul>
+                </div>
+                <div class="image-full"><img src="./img/DaitoshiCircular.jpg" alt="Daitoshi Circular City"></div>
+            </div>
+        </div>
+
+        <div class="history-content-block" style="background: #fffafa; padding: 40px; border-radius: var(--border-radius);">
+            <h2 style="font-family: var(--font-display); color: var(--color-spirit);">La Ira de los Protectores</h2>
+            <p>Daitoshi no es solo construcción; es **consecuencia**. Los Yokai, protectores de la tierra en la saga Kemushi, reaccionan ante la destrucción del medio ambiente. </p>
+            <div class="quote-block">
+                "Los Yokai tenían que contraatacar una vez que comenzabas a destruir el medio ambiente, y tenía que ser algo que los jugadores realmente notaran."
+            </div>
+            <p>Esta tensión se manifiesta mecánicamente cuando un jugador acumula demasiados hexágonos de un mismo tipo de tierra. Los Yokai imponen penalizaciones severas: reducen el número de trabajadores que puedes mantener o aumentan el coste de vapor en tus fábricas. Gestionar esta furia es la clave para no sucumbir antes de que la ciudad alcance su gloria.</p>
+            <div class="image-full"><img src="./img/yokai.webp" alt="Yokai acechando la ciudad"></div>
+        </div>
+
+        <div class="history-content-block">
+            <h2 style="font-family: var(--font-display); color: var(--color-copper);">El Sueño del Zeppelín</h2>
+            <div class="concept-grid">
+                <div class="image-full"><img src="./img/zepelling.png" alt="La Megamáquina y el Zeppelin"></div>
+                <div>
+                    <p>Como elemento icónico del mundo steampunk, la **Megamáquina** es la única pieza que se mueve en sentido contrario a las agujas del reloj. Representa un objetivo avanzado del juego que solo puede activarse tras desarrollar inventos específicos.</p>
+                    <p>Este coloso volante no solo otorga recompensas masivas, sino que permite a los magnates cambiar las invenciones en sus fábricas, facilitando giros estratégicos que pueden cambiar el destino de la partida en sus turnos finales.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
 
     <daitoshi-footer></daitoshi-footer>
 </body>
