@@ -1,0 +1,125 @@
+/* =====================================================
+   SECCIÓN TABLERO – Estilos encapsulados
+   Solo afectan a esta página
+===================================================== */
+
+.mainImage {
+    padding: 80px 0;
+    background: linear-gradient(
+        180deg,
+        var(--color-bg-paper) 0%,
+        #f6f2ea 100%
+    );
+}
+
+/* Títulos */
+.mainImage h1 {
+    font-size: 2.8rem;
+    margin: 60px 0 25px;
+    position: relative;
+    display: inline-block;
+}
+
+.mainImage h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60%;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        var(--color-copper),
+        transparent
+    );
+    border-radius: 2px;
+}
+
+.mainImage h2 {
+    font-size: 2rem;
+    margin: 60px 0 20px;
+    color: var(--color-forest);
+}
+
+/* Párrafos */
+.mainImage p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    color: var(--color-text-main);
+    max-width: 900px;
+}
+
+/* Imágenes */
+.mainImage img {
+    margin: 30px 0;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.mainImage img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-copper);
+}
+
+/* Lista de contenido */
+.mainImage ul {
+    margin-top: 30px;
+    padding-left: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.mainImage ul > li {
+    background-color: white;
+    padding: 14px 18px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    border-left: 4px solid var(--color-copper);
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.mainImage ul > li:hover {
+    transform: translateX(6px);
+    border-left-color: var(--color-forest);
+}
+
+/* Sublistas */
+.mainImage ul ul {
+    margin-top: 10px;
+    display: block;
+}
+
+.mainImage ul ul li {
+    background: var(--color-steam);
+    border-left: 3px solid var(--color-forest);
+    font-size: 0.9rem;
+    box-shadow: none;
+}
+
+/* Sección tipo bloque editorial */
+.mainImage .container {
+    background-color: white;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mainImage {
+        padding: 50px 0;
+    }
+
+    .mainImage .container {
+        padding: 30px 20px;
+    }
+
+    .mainImage h1 {
+        font-size: 2rem;
+    }
+
+    .mainImage h2 {
+        font-size: 1.6rem;
+    }
+}
