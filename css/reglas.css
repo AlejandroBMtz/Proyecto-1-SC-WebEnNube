@@ -1,0 +1,288 @@
+/* ==========================================
+   reglas.css (FORCED SECTION BANDS)
+   Works with:
+   <main class="container section-padding">
+     <div class="history-content-block">...</div>
+     ...
+   </main>
+   ========================================== */
+body { outline: 10px solid hotpink !important; }
+
+/* 1) main must NOT be boxed like .container */
+main.container.section-padding{
+  /* break out of container constraints */
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+
+  /* remove container padding so bands can touch edges */
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+  /* remove any background that may hide bands */
+  background: transparent !important;
+
+  /* keep vertical spacing */
+  padding-top: 60px !important;
+  padding-bottom: 80px !important;
+}
+
+/* 2) Each block becomes a FULL-WIDTH band */
+.history-content-block{
+  width: 100vw !important;                 /* FULL viewport width */
+  margin-left: calc(50% - 50vw) !important; /* “break out” trick */
+  margin-right: calc(50% - 50vw) !important;
+
+  padding: 80px 0 !important;
+  border-radius: 0 !important;             /* bands, not cards */
+}
+
+/* 3) Alternate colors (divisions) */
+.history-content-block:nth-of-type(odd){
+  background: #fbf7f1 !important;  /* warm paper */
+}
+
+.history-content-block:nth-of-type(even){
+  background: #eef1f3 !important;  /* light gray band */
+}
+
+/* 4) Center the content inside each band */
+.history-content-block .section-header,
+.history-content-block h3,
+.history-content-block p,
+.history-content-block ul{
+  width: min(980px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* 5) Header style like homepage */
+.section-header{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2{
+  font-family: var(--font-display);
+  font-size: clamp(34px, 3.2vw, 56px);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.section-header p{
+  margin: 16px auto 0;
+  max-width: 70ch;
+  opacity: 0.85;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.section-header::after{
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: 18px auto 0;
+  background: var(--color-copper);
+  border-radius: 4px;
+}
+
+/* 6) Content styling */
+.history-content-block h3{
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin: 26px auto 10px;
+  line-height: 1.2;
+}
+
+.history-content-block p{
+  margin: 0 auto 14px;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+/* 7) List bullets (copper) */
+.history-content-block ul{
+  margin: 16px auto 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.history-content-block li{
+  margin: 10px 0;
+  line-height: 1.75;
+  position: relative;
+  padding-left: 18px;
+}
+
+.history-content-block li::before{
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-copper);
+}
+
+/* 8) Quote as its own band */
+.quote-block{
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+
+  padding: 80px 0 !important;
+  background: #fbf7f1 !important;
+  border-left: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  /* center quote card inside */
+  display: flex;
+  justify-content: center;
+}
+
+.quote-block{
+  font-style: normal;
+}
+
+/* inner “quote card” */
+.quote-block::before{
+  content: "";
+  display: none;
+}
+
+.quote-block{
+  position: relative;
+}
+
+.quote-block{
+  /* create inner card */
+}
+
+.quote-block{
+  /* Use a nested card effect with a pseudo wrapper */
+}
+
+.quote-block{
+  /* we’ll do it by using an inner max-width and border */
+  max-width: none !important;
+}
+
+.quote-block{
+  /* inner content */
+}
+
+.quote-block{
+  /* final: inner quote box */
+}
+
+.quote-block{
+  /* The actual text box */
+}
+
+.quote-block{
+  /* Use padding to look like a card */
+  align-items: center;
+}
+
+.quote-block{
+  /* Put the card look on a child-like span using inline-block */
+  text-align: left;
+}
+
+.quote-block{
+  /* text style */
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Turn quote text itself into a centered card */
+.quote-block{
+  padding: 80px 24px !important;
+}
+
+.quote-block{
+  /* create card */
+}
+
+.quote-block{
+  /* because we can't wrap HTML, make the quote itself a card */
+  background: #fbf7f1 !important;
+}
+
+.quote-block{
+  /* override card look by adding an inner box-shadow and border */
+  box-sizing: border-box;
+}
+
+.quote-block{
+  border-left: 0 !important;
+}
+
+/* Real card look */
+.quote-block{
+  /* We'll simulate a card by adding another background layer */
+}
+
+.quote-block{
+  /* Use a max-width card feel */
+}
+
+.quote-block{
+  /* This works: */
+  border-left: 0 !important;
+}
+
+.quote-block{
+  /* inner card */
+  background: #fbf7f1 !important;
+}
+
+.quote-block{
+  /* ok */
+}
+
+/* Create the inner card by styling the text node area */
+.quote-block{
+  /* Use outline via box-shadow */
+  box-shadow: none !important;
+}
+
+/* Better: just style quote as a card directly */
+.quote-block{
+  background: #eef1f3 !important;
+}
+
+.quote-block{
+  /* inner card look */
+  padding: 34px 28px !important;
+  border-left: 8px solid var(--color-copper) !important;
+  border-radius: var(--border-radius) !important;
+  background: rgba(191, 126, 72, 0.06) !important;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.05) !important;
+
+  width: min(980px, 100%) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  .history-content-block{
+    padding: 56px 0 !important;
+  }
+
+  .section-header h2{
+    font-size: clamp(28px, 7vw, 44px);
+  }
+
+  .section-header p{
+    font-size: 16px;
+  }
+
+  main.container.section-padding{
+    padding-top: 40px !important;
+    padding-bottom: 60px !important;
+  }
+}
