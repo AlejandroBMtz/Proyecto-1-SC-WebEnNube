@@ -1,0 +1,57 @@
+.intro {
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.intro p {
+    font-size: 1.25rem;
+    color: var(--color-bg-dark);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font-family: var(--font-body);
+    text-align: justify;
+}
+
+.intro h1 {
+    color: var(--color-bg-dark);
+}
+
+.estrategia {
+    margin-left: 7vw;
+    margin-bottom: 5vh;
+}
+
+.estrategiaCont {
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    height: 20vh;
+    width: auto;
+}
+
+.explicacion {
+    margin-left: 3vw;
+}
+
+.principiante {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
